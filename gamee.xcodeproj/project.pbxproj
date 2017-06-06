@@ -12,6 +12,7 @@
 		1030B1301EE54D2E006D5907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1030B12E1EE54D2E006D5907 /* Main.storyboard */; };
 		1030B1321EE54D2E006D5907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1030B1311EE54D2E006D5907 /* Assets.xcassets */; };
 		1030B1351EE54D2E006D5907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1030B1331EE54D2E006D5907 /* LaunchScreen.storyboard */; };
+		1030B13E1EE54D51006D5907 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1030B13D1EE54D51006D5907 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1030B1311EE54D2E006D5907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1030B1341EE54D2E006D5907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1030B1361EE54D2E006D5907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1030B13D1EE54D51006D5907 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1030B13E1EE54D51006D5907 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				1030B1291EE54D2E006D5907 /* gamee */,
 				1030B1281EE54D2E006D5907 /* Products */,
+				1030B13C1EE54D51006D5907 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				1030B1361EE54D2E006D5907 /* Info.plist */,
 			);
 			path = gamee;
+			sourceTree = "<group>";
+		};
+		1030B13C1EE54D51006D5907 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1030B13D1EE54D51006D5907 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

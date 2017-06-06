@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gamee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zF0-cv-CvD" customClass="SKView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="xjv-63-Ngb">
+                                        <rect key="frame" x="60" y="560" width="255" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Eh-Fz-JNf">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <state key="normal" title="&lt;-"/>
+                                                <connections>
+                                                    <action selector="SINISTRA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQW-KN-hId"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11p-wf-Old">
+                                                <rect key="frame" x="208" y="0.0" width="47" height="53"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <state key="normal" title="-&gt;"/>
+                                                <connections>
+                                                    <action selector="DESTRA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJK-n9-y0s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xjv-63-Ngb" firstAttribute="leading" secondItem="zF0-cv-CvD" secondAttribute="leading" constant="60" id="LwT-lr-K5p"/>
+                                    <constraint firstAttribute="trailing" secondItem="xjv-63-Ngb" secondAttribute="trailing" constant="60" id="kzV-0j-BuK"/>
+                                    <constraint firstAttribute="bottom" secondItem="xjv-63-Ngb" secondAttribute="bottom" constant="34" id="oIz-tF-sAA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zF0-cv-CvD" secondAttribute="trailing" id="BCe-Dz-w4W"/>
+                            <constraint firstItem="zF0-cv-CvD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uao-sg-1iW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zF0-cv-CvD" secondAttribute="bottom" id="jIy-R2-UsQ"/>
+                            <constraint firstItem="zF0-cv-CvD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tCC-aB-6GV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="skView" destination="zF0-cv-CvD" id="fe2-J1-m2O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
